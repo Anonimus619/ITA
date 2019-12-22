@@ -12,33 +12,35 @@
    a[target] {
        color: red;
    }
-
-   p:nth-child(even) {
-       color: red;
-   }
-   p:nth-child(odd) {
-       color: blue;
-   }
-   p[class*="para"]::after {
-content: " - NEW";
-color: yellow;
-}
-
-#last:hover {
- font-style: italic;
-}
+  #first-div>p::after{
+      content: "-NEW";
+      color: yellow;
+  }
+  #second-div>p:nth-child(even){
+      color: red;
+  }
+  #second-div>p:nth-child(odd){
+      color: blue;
+  }
+  body>p:last-child:hover{
+      font-style: italic;
+  }
+  
+  
     </style>
 </head>
+<!-- body>p:last-child:hover ja nisam znao da to postoji,iskreno. isao sam putem logike i eto bitno je
+    da radi :)-->
 
 <body>
     <h1>Main Heading</h1>
-    <p class="para1">Paragraph 1</p>
+    <p>Paragraph 1</p>
     <a href="https://www.google.com/">Google</a>
     <a href="https://www.google.com/doodles">Google Doodles</a>
     <a href="https://www.link-group.eu/" target="_blank">Goto Link Group</a>
     <div id="first-div">
         <h2>Subheading</h2>
-        <p class="para2">Paragraph 2</p>
+        <p>Paragraph 2</p>
         <p>Paragraph 3</p>
         <div id="second-div">
             <h3>Sub subheading</h3>
@@ -50,7 +52,7 @@ color: yellow;
         </div>
     </div>
     <p>Paragraph 9</p>
-    <p id="last">Paragraph 10</p>
+    <p>Paragraph 10</p>
 </body>
 
 </html>
